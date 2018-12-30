@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo list</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">      
+</head>
+<body>
+<div class=container>
+    <h1>TODO LIST </h1>
+    <form action="/" method="POST" id=form1>
+        <div class="form-group">
+            <label for="name">New TODO:</label>
+            <input type="text" class="form-control" id="name" name="mess" placeholder="I must bake a cake!">
+        </div>
+        <div class=form-group>
+            <button type="submit" class="btn btn-primary">Add TODO</button>
+        </div>                          
+    </form>
+
+    <ul id="navigation">
+    </ul>
+
+    <ol class="list-group">
+        {% for m in mess %}
+            <li class="list-group-item ">{{ m.time }} {{ m.mess }}</li>
+        {% endfor %}
+    </ol>
+
+</div>
+</body>
+</html>
